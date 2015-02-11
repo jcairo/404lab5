@@ -1,0 +1,15 @@
+<div>Please login</div>
+{% if access_denied %}
+    <div>Access Denied!</div>
+{% endif %}
+    <form method="POST" action="">
+        Username: <input type="text" name="username"/></br>
+        Password: <input type="text" name="password"/></br>
+        <input type="submit"/>
+    </form>
+
+    <form method="POST" action="add_task">
+        Username: <input type="text" name="username"/></br>
+        Password: <input type="text" name="password"/></br>
+        <input type="submit"/>
+    </form>

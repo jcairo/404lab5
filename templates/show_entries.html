@@ -1,0 +1,21 @@
+{% if session %}
+<form method="POST" action="add_task">
+    Category: <input type="text" name="category"/></br>
+    Priority: <input type="text" name="priority"/></br>
+    Description: <input type="text" name="description"/></br>
+    <input type="submit"/>
+</form>
+{% endif %}
+
+
+{% if tasks %}
+    <table>
+{% endif %}
+{% for task in tasks %}
+    <tr>
+        <td>{{ task[0] }}</td><td>{{ task[1] }}</td><td>{{ task[2] }}</td>
+    <tr>
+{% end for %}
+{% if tasks %}
+    </table>
+{% endif %}
